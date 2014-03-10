@@ -1,0 +1,87 @@
+
+.textRotate-rotator {
+  position: relative;
+
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.textRotate-rotator .front, .textRotate-rotator .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-transition:  -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition:  -moz-transform 0.3s, opacity 0.3s;
+  -ms-transition:  -ms-transform 0.3s, opacity 0.3s;
+  -o-transition:  -o-transform 0.3s, opacity 0.3s;
+  transition:  transform 0.3s, opacity 0.3s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.textRotate-rotator .front {
+  display: inline-block;
+  opacity: 1;
+}
+.textRotate-rotator .back {
+  opacity: 0;
+  display: inline-block;
+}
+
+.textRotate-rotator.flipped .front {
+  display: inline-block;
+  opacity: 0;
+}
+
+.textRotate-rotator.flipped .back {
+  display: inline-block;
+  opacity: 1;
+}
+
+.textRotate-rotator.animation-vertical-rotate .front {
+  z-index: 2;
+}
+
+.textRotate-rotator.animation-vertical-rotate.flipped .front {
+  z-index: 1;
+
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.textRotate-rotator.animation-vertical-rotate.flipped .back {
+  z-index: 2;
+
+  -webkit-transform: rotateX(0);
+  -moz-transform: rotateX(0);
+  -ms-transform: rotateX(0);
+  -o-transform: rotateX(0);
+  transform: rotateX(0);
+}
+
+.textRotate-rotator.animation-vertical-rotate .back {
+  z-index: 1;
+
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}

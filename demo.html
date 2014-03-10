@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Text Rotator</title>
+  <meta name="author" content="Josh Cutler">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="jquery.text-rotator.js"></script>
+  <link rel='stylesheet' type="text/css" href="jquery.text-rotator.css" media='all'/>
+
+  <style>
+    .demo1, .demo2, .demo3 {
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div >
+    <h1>jQuery Text Rotator in a sentence</h1>
+    <h3 class="demo1"><span class="rotate">the initial phrase.</span></h1>
+  </div>
+  <div >
+    <h1>jQuery Text Rotator sequentially</h1>
+    <h3 class="demo2"<span class="rotate">0</span></h1>
+  </div>
+   <div >
+    <h1>jQuery Text Rotator randomly</h1>
+    <h3 class="demo3"><span class="rotate">0</span></h1>
+  </div>
+
+  <script>
+    $(".demo1 .rotate").textRotate({
+      phrases: [
+        'and another!',
+        'also this one!',
+      ],
+      height: '40px',
+      width: '200px'
+    });
+     $(".demo2 .rotate").textRotate({
+      phrases: [1,2,3,4,5,6,7,8,9,0],
+      random: false,
+    });
+    $(".demo3 .rotate").textRotate({
+      phrases: [1,2,3,4,5,6,7,8,9,0]
+    });
+  </script>
+</body>
+</html>
